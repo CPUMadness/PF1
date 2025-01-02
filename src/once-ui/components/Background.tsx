@@ -11,7 +11,7 @@ function setRef<T>(ref: React.Ref<T> | undefined, value: T | null) {
     }
 }
 
-export interface MaskOptions {
+interface MaskOptions {
     none: 'none';
     cursor: 'cursor';
     topLeft: 'topLeft';
@@ -22,7 +22,7 @@ export interface MaskOptions {
 
 type MaskType = keyof MaskOptions;
 
-export interface BackgroundProps {
+interface BackgroundProps {
     position?: CSSProperties['position'];
     gradient?: GradientProps;
     dots?: DotsProps;
@@ -32,19 +32,19 @@ export interface BackgroundProps {
     style?: React.CSSProperties;
 }
 
-export interface GradientProps {
+interface GradientProps {
     display?: boolean;
     opacity?: number;
 }
 
-export interface DotsProps {
+interface DotsProps {
     display?: boolean;
     opacity?: number;
     color?: string;
     size?: SpacingToken;
 }
 
-export interface LinesProps {
+interface LinesProps {
     display?: boolean;
     opacity?: number;
     size?: SpacingToken;
@@ -67,6 +67,7 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(
         const [smoothPosition, setSmoothPosition] = useState({ x: 0, y: 0 });
         const maskSize = 1200;
         const backgroundRef = useRef<HTMLDivElement>(null);
+        let lastCall = 0;
 
         useEffect(() => {
             setRef(forwardedRef, backgroundRef.current);
@@ -74,6 +75,10 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(
 
         useEffect(() => {
             const handleMouseMove = (event: MouseEvent) => {
+                const now = Date.now();
+                if (now - lastCall < 16) return;
+                lastCall = now;
+
                 if (backgroundRef.current) {
                     const rect = backgroundRef.current.getBoundingClientRect();
                     setCursorPosition({
@@ -170,7 +175,7 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(
                         style={{
                             ...commonStyles,
                             opacity: gradient.opacity,
-                            background: 'radial-gradient(100% 100% at 50% 0%, var(--static-transparent) 0%, var(--page-background) 100%), radial-gradient(90% 80% at 10% 20%, var(--brand-background-medium) 0%, var(--static-transparent) 100%), radial-gradient(200% 120% at 50% 0%, var(--accent-solid-medium) 0%, var(--static-transparent) 100%)',
+                            background: 'radial-gradient(100% 100% at 49.99% 0%, var(--static-transparent) 0%, var(--page-background) 100%), radial-gradient(87.4% 84.04% at 6.82% 16.24%, var(--brand-background-medium) 0%, var(--static-transparent) 100%), radial-gradient(217.89% 126.62% at 48.04% 0%, var(--accent-solid-medium) 0%, var(--static-transparent) 100%)',
                             ...maskStyle(),
                         }}
                     />
@@ -182,7 +187,7 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(
                         style={{
                             ...commonStyles,
                             opacity: dots.opacity,
-                            backgroundImage: `radial-gradient(var(--${dotsColor}) 0.5px, var(--static-transparent) 1px)`,
+                            backgroundImage: `radial-gradient(var(--${dotsColor}) 1px, var(--static-transparent) 1px)`,
                             backgroundSize: `var(--static-space-${dotsSize}) var(--static-space-${dotsSize})`,
                             ...maskStyle(),
                         }}
@@ -195,7 +200,7 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(
                         style={{
                             ...commonStyles,
                             opacity: lines.opacity,
-                            backgroundImage: `repeating-linear-gradient(45deg, var(--brand-on-background-weak) 0, var(--brand-on-background-weak) 0.5px, var(--static-transparent) 0.5px, var(--static-transparent) ${dots.size})`,
+                            backgroundImage: `repeating-linear-gradient(45deg, var(--brand-on-background-weak) 0, var(--brand-on-background-weak) 1px, var(--static-transparent) 1px, var(--static-transparent) ${dots.size})`,
                             ...maskStyle(),
                         }}
                     />
@@ -206,5 +211,4 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(
 );
 
 Background.displayName = 'Background';
-
 export { Background };

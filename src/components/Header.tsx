@@ -99,7 +99,7 @@ export const Header = () => {
                         padding="4"
                         justifyContent="center">
                         <Flex
-                            gap="4"
+                            gap="2"
                             textVariant="body-default-s">
                             { routes['/'] && (
                                 <ToggleButton

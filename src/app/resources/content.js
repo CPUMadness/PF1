@@ -63,7 +63,7 @@ const about = {
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Daniel is a Florida-based Information Technology student interested in learning more about his passion, technology. His attention to detail in helping clients with technology-based questions is recognized by peers, and leaders alike.</>
+        description: <>Daniel is a Florida-based Information Technology student interested in learning more about his lifelong passion, all things computers. His focus in helping clients with technology needs is recognized by peers, and leaders alike.</>
     },
     work: {
         display: true, // set to false to hide this section
@@ -72,7 +72,7 @@ const about = {
             {
                 company: 'Chick-fil-A',
                 timeframe: '2022 - Present',
-                role: 'Crew Member',
+                role: 'Kitchen Crew Member',
                 achievements: [
                     <>With my team, we accomplished average hourly sales of over $4,500, maintained order speeds of 3 minutes, and ensured a throughput of over 100 vehicles per hour.</>,
                 ],
@@ -90,7 +90,7 @@ const about = {
                 timeframe: 'April 2021 - June 2021',
                 role: 'IT Helpdesk Analyst',
                 achievements: [
-                    <>I handled IT-related phone calls and in-person questions from students and faculty members, resolving my support tickets within a 10-minute phone call using the Microsoft Azure Active Directory (now Entra ID), Office 365, and Cisco VOIP.</>,
+                    <>At Daytona State College, my colleagues and I were responsible for technical support for a student body of 29,000 and 500 faculty members. All of my support tickets and inquiries consisted of using the Microsoft Azure Active Directory (now Entra ID), Office 365, ServiceNow, and Cisco VOIP.</>,
                 ],
                 images: [ ]
             }
@@ -102,11 +102,11 @@ const about = {
         institutions: [
             {
                 name: 'University of Central Florida',
-                description: <>2022 - Current | Bachelor of Science in Information Technology.</>,
+                description: <><b>2022 - Present | </b> Bachelor of Science in Information Technology</>,
             },
             {
                 name: 'Daytona State College',
-                description: <>2020 - 2022 | Associate of Art.</>,
+                description: <><b>2020 - 2020 |</b> Associate of Art</>,
             }
         ]
     },
@@ -152,7 +152,7 @@ const about = {
 
 const blog = {
     label: 'Blog',
-    title: 'Writing about design and tech...',
+    title: 'Writing about things...',
     description: `Read what ${person.name} has been up to recently`
     // Create new blog posts by adding a new .mdx file to app/blog/posts
     // All posts will be listed on the /blog route
@@ -161,7 +161,7 @@ const blog = {
 const work = {
     label: 'Projects',
     title: 'My projects',
-    description: `Design and dev projects by ${person.name}`
+    description: `Projects by ${person.name}`
     // Create new project pages by adding a new .mdx file to app/blog/posts
     // All projects will be listed on the /home and /work routes
 }
