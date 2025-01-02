@@ -40,7 +40,7 @@ const social = [
 const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
-    description: `Portfolio website showcasing my work as a ${person.role}`,
+    description: `Portfolio website showcasing my work as an ${person.role}`,
     headline: <>Welcome to my Portfolio</>,
     subline: <>I'm Daniel Snodgrass, a senior majoring in <b>Information Technology at the University of Central Florida</b>.</>
 }
