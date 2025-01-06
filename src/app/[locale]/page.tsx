@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Heading, Flex, Text, Button,  Avatar, RevealFx, Arrow } from '@/once-ui/components';
 import { Projects } from '@/components/work/Projects';
-import { Analytics } from "@vercel/analytics/react"
+
 import { baseURL, routes, renderContent } from '@/app/resources'; 
 import { Mailchimp } from '@/components';
 import { Posts } from '@/components/blog/Posts';
@@ -146,7 +146,6 @@ export default function Home(
 				</Flex>
 			)}
 			<Projects range={[2]} locale={locale}/>
-		<Analytics/>
 		</Flex>
 	);
 }

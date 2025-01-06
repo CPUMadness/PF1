@@ -3,6 +3,8 @@ import "@/once-ui/tokens/index.scss";
 
 import classNames from 'classnames';
 
+import { Analytics } from "@vercel/analytics/react"
+
 import { Footer, Header, RouteGuard } from "@/components";
 import { baseURL, effects, style } from '@/app/resources'
 
@@ -134,6 +136,8 @@ export default async function RootLayout({
 					<Footer/>
 				</Flex>
 			</Flex>
+		<Analytics/>
 		</NextIntlClientProvider>
+		
 	);
 }
