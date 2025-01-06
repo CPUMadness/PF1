@@ -3,7 +3,6 @@ import "@/once-ui/tokens/index.scss";
 
 import classNames from 'classnames';
 
-import { Analytics } from "@vercel/analytics/react"
 
 import { Footer, Header, RouteGuard } from "@/components";
 import { baseURL, effects, style } from '@/app/resources'
@@ -93,7 +92,7 @@ export default async function RootLayout({
 	const messages = await getMessages();
 	return (
 		<NextIntlClientProvider messages={messages}>
-        <Analytics />
+
 			<Flex
 				as="html" lang="en"
 				background="page"
