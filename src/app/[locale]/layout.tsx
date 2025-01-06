@@ -93,6 +93,7 @@ export default async function RootLayout({
 	const messages = await getMessages();
 	return (
 		<NextIntlClientProvider messages={messages}>
+        <Analytics />
 			<Flex
 				as="html" lang="en"
 				background="page"
@@ -136,8 +137,7 @@ export default async function RootLayout({
 					<Footer/>
 				</Flex>
 			</Flex>
-		<Analytics/>
-		</NextIntlClientProvider>
+			</NextIntlClientProvider>
 		
 	);
 }

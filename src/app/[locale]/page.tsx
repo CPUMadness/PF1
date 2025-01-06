@@ -74,6 +74,7 @@ export default function Home(
 					}),
 				}}
 			/>
+
 			<Flex
 				fillWidth
 				direction="column"
