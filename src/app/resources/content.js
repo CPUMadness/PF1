@@ -70,6 +70,22 @@ const about = {
         title: 'Work Experience',
         experiences: [
             {
+                company: 'Brown & Brown ',
+                timeframe: 'May 2025 - June 2025',
+                role: 'Technology Solutions',
+                achievements: [
+                    <>3 month long internship. With the team, we researched into bettering the tech experience of 17,000 teammates globally. Resigned from internship early due to health issues.</>,
+                ],
+                images: [ // optional: leave the array empty if you don't want to display images
+                   /* {
+                        src: '/images/projects/project-01/cover-01.jpg',
+                        alt: 'Once UI Project',
+                        width: 16,
+                        height: 9
+                    } */
+                ]
+            },
+            {
                 company: 'Chick-fil-A',
                 timeframe: '2022 - Present',
                 role: 'Kitchen Crew Member',
