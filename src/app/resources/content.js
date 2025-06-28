@@ -2,7 +2,7 @@ import { InlineCode } from "@/once-ui/components";
 
 const person = {
     firstName: 'Daniel',
-    lastName:  'Snodgrass',
+    lastName:  'Snodgrass Jr.',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
@@ -23,7 +23,7 @@ const social = [
     {
         name: 'LinkedIn',
         icon: 'linkedin',
-        link: 'https://www.linkedin.com/in/daniel-snodgrass-022277244/',
+        link: 'https://www.linkedin.com/in/danielwsnodgrass/',
     },
     {
         name: 'X',
