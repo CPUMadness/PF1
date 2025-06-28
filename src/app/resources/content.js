@@ -72,9 +72,9 @@ const about = {
             {
                 company: 'Brown & Brown ',
                 timeframe: 'May 2025 - June 2025',
-                role: 'Technology Solutions',
+                role: 'Technology Solutions Intern',
                 achievements: [
-                    <>3 month long internship. With the team, we researched into bettering the tech experience of 17,000 teammates globally. Resigned from internship early due to health issues.</>,
+                    <>10 week long internship, resigned early. With the team, we researched into bettering the tech experience of 17,000 teammates globally.</>,
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
                    /* {
