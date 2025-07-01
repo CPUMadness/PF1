@@ -3,7 +3,7 @@ title: "Running a local language AI model on Linux"
 publishedAt: "2025-06-30"
 summary: "Instructions on how to run your own AI model on a Debian-based computer."
 images:
-  - "/images/projects/cover-01.jpg"
+  - "/images/steeltowngirlonasaturdaynight.png"
 team:
   - name: "Daniel Snodgrass"
     role: "IT Student"
@@ -12,13 +12,13 @@ team:
 ---
 
 ## Overview
-On June 28th, 2025, I posted instructions on creating your own AI agent on Microsoft's servers using Microsoft Copilot. The downside to using a Copilot is the limitations it has built-in, being locked down to Microsoft's domains, and the inherent risk of sharing sensitive data. This is fine if you're experimenting with it for fun, but not if people's data are at stake.
+On June 28th, 2025, I posted instructions on creating your own AI agent on Microsoft's servers using Microsoft Copilot. The downside to using Copilot is the limitations it has built-in, being locked down to Microsoft's domains, and the inherent risk of sharing sensitive data. This is fine if you're experimenting with it for fun, but not if people's data are at stake.
 
 In this blog post, you will learn how to run your own local language model on **Ubuntu** using **Ollama**, given you have the proper hardware to run it. If you want to read the official installation documentations, you can find that [here.](https://github.com/ollama/ollama/blob/main/docs/windows.md) (links to GitHub)
 
 Microsoft Windows users, you have a full native Windows application that can be downloaded [here.](https://ollama.com/download/OllamaSetup.exe) (links to an instant download from Ollama's website)
 
-macOS users can download Ollama [here.](https://ollama.com/download/mac) (links to an instant download from Ollama's website)
+macOS users can download Ollama [here.](https://ollama.com/download/mac) (links to a download from Ollama's website)
 
 
 
@@ -32,14 +32,17 @@ A local language model is an AI language model ran natively on your own computer
 - **6GB of Disk Space** - This varies by parameter size. In this case, we're using a 7B parameter model from Mistral.
 - **Internet Connection**
 
-## Instructions (only for Linux)
+## Instructions (Linux)
 Open the Terminal:
 1. To install Ollama, entering the command: ``curl -fsSL https://ollama.com/install.sh | sh``
 	- This will install Ollama using a shell script from Ollama.
+
 2. Once Ollama is installed, install the Mistral AI LLM by entering: ``ollama run mistral``
 	- This will the 7B parameters of Mistral AI to your computer. Approximate size is 4.1GB.
+
 3. After Ollama and Mistral is installed, you should see on your terminal ``Send a message (/? for help)``
 	- If this doesn't appear, type in ``ollama run mistral`` and it should pop up.
+
 4. Ask it whatever you want.
  
 ## Conclusion
