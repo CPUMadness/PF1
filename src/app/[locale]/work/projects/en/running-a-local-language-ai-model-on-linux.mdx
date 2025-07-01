@@ -1,0 +1,48 @@
+---
+title: "Running a local language AI model on Linux"
+publishedAt: "2025-06-30"
+summary: "Instructions on how to run your own AI model on a Debian-based computer."
+images:
+  - "/images/projects/cover-01.jpg"
+team:
+  - name: "Daniel Snodgrass"
+    role: "IT Student"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/danielwsnodgrass/"
+---
+
+## Overview
+On June 28th, 2025, I posted instructions on creating your own AI agent on Microsoft's servers using Microsoft Copilot. The downside to using a Copilot is the limitations it has built-in, being locked down to Microsoft's domains, and the inherent risk of sharing sensitive data. This is fine if you're experimenting with it for fun, but not if people's data are at stake.
+
+In this blog post, you will learn how to run your own local language model on **Ubuntu** using **Ollama**, given you have the proper hardware to run it. If you want to read the official installation documentations, you can find that [here.](https://github.com/ollama/ollama/blob/main/docs/windows.md) (links to GitHub)
+
+Microsoft Windows users, you have a full native Windows application that can be downloaded [here.](https://ollama.com/download/OllamaSetup.exe) (links to an instant download from Ollama's website)
+
+macOS users can download Ollama [here.](https://ollama.com/download/mac) (links to an instant download from Ollama's website)
+
+
+
+
+## What is it?
+A local language model is an AI language model ran natively on your own computer. You have complete access and freedom on what the AI can output via parameters, functions, API calls, etc. 
+
+## Requirements
+- **Ubuntu** - This installation can *probably* work with any Debian distro.
+- **GPU** - A GPU with high Video Memory (VRAM) is ideal for AI. Modern GPU's made after 2018 (NVIDIA RTX series, AMD RX series) can perform AI computations with minimal issues, hardware varying.  
+- **6GB of Disk Space** - This varies by parameter size. In this case, we're using a 7B parameter model from Mistral.
+- **Internet Connection**
+
+## Instructions (only for Linux)
+Open the Terminal:
+1. To install Ollama, entering the command: ``curl -fsSL https://ollama.com/install.sh | sh``
+	- This will install Ollama using a shell script from Ollama.
+2. Once Ollama is installed, install the Mistral AI LLM by entering: ``ollama run mistral``
+	- This will the 7B parameters of Mistral AI to your computer. Approximate size is 4.1GB.
+3. After Ollama and Mistral is installed, you should see on your terminal ``Send a message (/? for help)``
+	- If this doesn't appear, type in ``ollama run mistral`` and it should pop up.
+4. Ask it whatever you want.
+ 
+## Conclusion
+This was a pretty fun project to do as you have full access to an LLM with everything it entails and what it can and can't do. Open source solutions are awesome.
+
+
